@@ -7,11 +7,16 @@
 <meta name="description" content="CV của Đinh Minh Tâm: Salesforce Developer với hơn 10 năm kinh nghiệm, chuyên Agentforce, Experience Cloud, LWC và Managed Package.">
 <style>
 :root{--navy:#032d60;--blue:#0176d3;--teal:#00a9a5;--bg:#f4f7fb;--card:#fff;--ink:#17233b;--muted:#5b6b82;--line:#dbe4ef}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
-a{color:var(--blue)}header{background:linear-gradient(135deg,#032d60 0%,#0176d3 62%,#00a9a5 100%);color:#fff;padding:56px 20px 48px}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans JP",Meiryo,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+html[lang="ja"] body{line-height:1.75}
+a{color:var(--blue)}header{background:linear-gradient(135deg,#032d60 0%,#0176d3 62%,#00a9a5 100%);color:#fff;padding:28px 20px 48px}
 .wrap{max-width:1080px;margin:0 auto;padding:0 20px}section.wrap{padding-top:36px;padding-bottom:10px}
+.topbar{display:flex;justify-content:flex-end;margin-bottom:18px}
+.langs{display:flex;gap:6px;flex-wrap:wrap}
+button.lang{border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.12);color:#fff;border-radius:999px;padding:6px 12px;cursor:pointer;font-weight:700;font-size:14px}
+button.lang.active,button.lang:hover{background:#fff;color:var(--navy);border-color:#fff}
 .hero{display:flex;gap:28px;align-items:center;flex-wrap:wrap}.avatar{width:104px;height:104px;border-radius:28px;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.5);display:grid;place-items:center;font-size:38px;font-weight:800;letter-spacing:1px;flex:none}
-h1{margin:0;font-size:clamp(34px,6vw,56px);line-height:1.05}h1 span{color:#aee6ff}.subtitle{font-size:clamp(18px,3vw,24px);margin:10px 0 6px;opacity:.95}.intro{max-width:720px;opacity:.9;margin:0}
+h1{margin:0;font-size:clamp(34px,6vw,56px);line-height:1.05}.subtitle{font-size:clamp(18px,3vw,24px);margin:10px 0 6px;opacity:.95}.intro{max-width:720px;opacity:.9;margin:0}
 .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.pill{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);color:#fff;padding:6px 12px;border-radius:999px;font-size:14px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.stat{background:#fff;color:var(--ink);border-radius:16px;padding:16px}.stat b{display:block;font-size:30px;color:var(--navy);line-height:1}.stat span{color:var(--muted);font-size:14px}
 h2{font-size:26px;color:var(--navy);margin:8px 0 6px}h2+p{color:var(--muted);margin-top:0}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin:14px 0;box-shadow:0 4px 18px rgba(3,45,96,.05)}
@@ -22,82 +27,235 @@ h2{font-size:26px;color:var(--navy);margin:8px 0 6px}h2+p{color:var(--muted);mar
 .projects{display:grid;grid-template-columns:1fr 1fr;gap:16px}.project{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.project h3{margin:0 0 4px;color:var(--navy)}.meta{color:var(--muted);font-size:14px;margin-bottom:10px}.project p{margin:0 0 12px}
 footer{padding:36px 20px 48px;color:var(--muted);text-align:center;font-size:14px}
 .print{position:fixed;right:18px;bottom:18px;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:12px 18px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.25);font-weight:700}
-@media(max-width:760px){.stats{grid-template-columns:1fr 1fr}.grid2,.projects{grid-template-columns:1fr}header{padding-top:36px}.print{position:static;display:block;margin:20px auto}}
-@media print{body{background:#fff}.print,.filters{display:none}header{padding:24px 0}.card,.project{box-shadow:none;break-inside:avoid}}
+@media(max-width:760px){.stats{grid-template-columns:1fr 1fr}.grid2,.projects{grid-template-columns:1fr}header{padding-top:20px}.print{position:static;display:block;margin:20px auto}}
+@media print{body{background:#fff}.print,.filters,.langs{display:none}header{padding:24px 0}.card,.project{box-shadow:none;break-inside:avoid}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
+<div class="topbar"><nav class="langs" aria-label="Language">
+<button type="button" class="lang" data-lang="en" aria-pressed="false">EN</button>
+<button type="button" class="lang active" data-lang="vi" aria-pressed="true">VI</button>
+<button type="button" class="lang" data-lang="ja" aria-pressed="false">日本語</button>
+</nav></div>
 <div class="hero"><div class="avatar">DMT</div><div>
 <h1>Đinh Minh Tâm</h1>
-<p class="subtitle">Salesforce Developer &amp; Leader <span>— Agentforce · Experience Cloud · Managed Package</span></p>
-<p class="intro">Hơn 10 năm làm Salesforce, từ thiết kế database, xây dựng Managed Package đến triển khai AI/Agentforce vào sản phẩm thật. Mạnh về dẫn dắt nhóm nhỏ, làm việc có trách nhiệm và giữ tinh thần teamwork.</p>
+<p class="subtitle"><span data-i18n="role">Salesforce Developer &amp; Leader</span> <span data-i18n="focus">— Agentforce · Experience Cloud · Managed Package</span></p>
+<p class="intro" data-i18n="intro">Hơn 10 năm làm Salesforce, từ thiết kế database, xây dựng Managed Package đến triển khai AI/Agentforce vào sản phẩm thật. Mạnh về dẫn dắt nhóm nhỏ, làm việc có trách nhiệm và giữ tinh thần teamwork.</p>
 </div></div>
 <div class="pills"><span class="pill">Salesforce</span><span class="pill">Agentforce &amp; AI</span><span class="pill">LWC · Apex · Visualforce</span><span class="pill">Experience Cloud</span><span class="pill">.NET · Java</span></div>
 <div class="stats">
-<div class="stat"><b>10+</b><span>năm kinh nghiệm Salesforce</span></div>
-<div class="stat"><b>13</b><span>dự án trong skillsheet</span></div>
-<div class="stat"><b>12/13</b><span>dự án ở vai trò Leader</span></div>
-<div class="stat"><b>9</b><span>chứng chỉ Salesforce</span></div>
+<div class="stat"><b>10+</b><span data-i18n="s1">năm kinh nghiệm Salesforce</span></div>
+<div class="stat"><b>13</b><span data-i18n="s2">dự án trong skillsheet</span></div>
+<div class="stat"><b>12/13</b><span data-i18n="s3">dự án ở vai trò Leader</span></div>
+<div class="stat"><b>9</b><span data-i18n="s4">chứng chỉ Salesforce</span></div>
 </div>
 </div></header>
 <main>
-<section class="wrap"><h2>Giới thiệu</h2><p>Developer Salesforce gắn bó với platform từ năm 2014, tốt nghiệp kỹ sư phần mềm tại Đại học Cần Thơ.</p>
+<section class="wrap"><h2 data-i18n="hAbout">Giới thiệu</h2><p data-i18n="about">Developer Salesforce gắn bó với platform từ năm 2014, tốt nghiệp kỹ sư phần mềm tại Đại học Cần Thơ.</p>
 <div class="card"><ul>
-<li><b>10 năm kinh nghiệm dev Salesforce</b> — hiểu sâu về Salesforce Platform và thiết kế cơ sở dữ liệu.</li>
-<li><b>Khả năng quản lý dự án</b> — trách nhiệm cao trong công việc, dẫn dắt nhóm 2–10 người.</li>
-<li><b>Tinh thần teamwork</b> — biết cách giữ nhịp làm việc chung của cả nhóm.</li>
-<li><b>Lĩnh vực sở trường:</b> Salesforce Experience Cloud, .NET, Java.</li>
+<li><b data-i18n="b1t">10 năm kinh nghiệm dev Salesforce</b><span data-i18n="b1d"> — hiểu sâu về Salesforce Platform và thiết kế cơ sở dữ liệu.</span></li>
+<li><b data-i18n="b2t">Khả năng quản lý dự án</b><span data-i18n="b2d"> — trách nhiệm cao trong công việc, dẫn dắt nhóm 2–10 người.</span></li>
+<li><b data-i18n="b3t">Tinh thần teamwork</b><span data-i18n="b3d"> — biết cách giữ nhịp làm việc chung của cả nhóm.</span></li>
+<li><b data-i18n="b4t">Lĩnh vực sở trường:</b><span data-i18n="b4d"> Salesforce Experience Cloud, .NET, Java.</span></li>
 </ul></div></section>
-<section class="wrap"><h2>Kỹ năng</h2>
+<section class="wrap"><h2 data-i18n="hSkills">Kỹ năng</h2>
 <div class="grid2">
 <div class="card"><h3>Salesforce</h3><p><span class="tag">Apex</span><span class="tag">Lightning Web Components</span><span class="tag">Visualforce</span><span class="tag">Aura</span><span class="tag">Flow Builder</span><span class="tag">Agentforce</span><span class="tag">Data Cloud</span><span class="tag">Experience Cloud</span><span class="tag">Salesforce Sites</span><span class="tag">Managed Package</span><span class="tag">RAG</span><span class="tag">Prompt Templates</span></p></div>
-<div class="card"><h3>Ngôn ngữ &amp; nền tảng</h3><p><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">C#</span><span class="tag">VB.NET</span><span class="tag">.NET</span><span class="tag">ASP.NET MVC</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">jQuery</span><span class="tag">Vue.js</span><span class="tag">AngularJS</span><span class="tag">Heroku</span><span class="tag">AWS</span><span class="tag">Oracle</span><span class="tag">PostgreSQL</span><span class="tag">Git</span><span class="tag">VS Code</span></p></div>
+<div class="card"><h3 data-i18n="skills2">Ngôn ngữ &amp; nền tảng</h3><p><span class="tag">Java</span><span class="tag">JavaScript</span><span class="tag">C#</span><span class="tag">VB.NET</span><span class="tag">.NET</span><span class="tag">ASP.NET MVC</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">jQuery</span><span class="tag">Vue.js</span><span class="tag">AngularJS</span><span class="tag">Heroku</span><span class="tag">AWS</span><span class="tag">Oracle</span><span class="tag">PostgreSQL</span><span class="tag">Git</span><span class="tag">VS Code</span></p></div>
 </div></section>
-<section class="wrap"><h2>Chứng chỉ &amp; học vấn</h2>
+<section class="wrap"><h2 data-i18n="hCerts">Chứng chỉ &amp; học vấn</h2>
 <div class="card">
-<div class="cert"><b>Salesforce Certified Sharing and Visibility Architect</b><span class="year">12/2024</span></div>
-<div class="cert"><b>Salesforce Certified Agentforce Specialist</b><span class="year">09/2024</span></div>
-<div class="cert"><b>Salesforce Certified AI Associate</b><span class="year">09/2024</span></div>
-<div class="cert"><b>Salesforce Certified JavaScript Developer I</b><span class="year">04/2024</span></div>
-<div class="cert"><b>Salesforce Associate</b><span class="year">12/2022</span></div>
-<div class="cert"><b>Salesforce Certified Platform Developer II</b><span class="year">06/2022</span></div>
-<div class="cert"><b>Salesforce Certified Platform App Builder</b><span class="year">12/2020</span></div>
-<div class="cert"><b>Salesforce Certified Administrator</b><span class="year">12/2020</span></div>
-<div class="cert"><b>Salesforce Certified Platform Developer</b><span class="year">12/2016</span></div>
-<div class="cert"><b>Kỹ sư phần mềm — Đại học Cần Thơ</b><span class="year">09/2014</span></div>
+<div class="cert"><b>Salesforce Certified Sharing and Visibility Architect</b><span class="year" data-i18n="y1">12/2024</span></div>
+<div class="cert"><b>Salesforce Certified Agentforce Specialist</b><span class="year" data-i18n="y2">09/2024</span></div>
+<div class="cert"><b>Salesforce Certified AI Associate</b><span class="year" data-i18n="y3">09/2024</span></div>
+<div class="cert"><b>Salesforce Certified JavaScript Developer I</b><span class="year" data-i18n="y4">04/2024</span></div>
+<div class="cert"><b>Salesforce Associate</b><span class="year" data-i18n="y5">12/2022</span></div>
+<div class="cert"><b>Salesforce Certified Platform Developer II</b><span class="year" data-i18n="y6">06/2022</span></div>
+<div class="cert"><b>Salesforce Certified Platform App Builder</b><span class="year" data-i18n="y7">12/2020</span></div>
+<div class="cert"><b>Salesforce Certified Administrator</b><span class="year" data-i18n="y8">12/2020</span></div>
+<div class="cert"><b>Salesforce Certified Platform Developer</b><span class="year" data-i18n="y9">12/2016</span></div>
+<div class="cert"><b data-i18n="edu">Kỹ sư phần mềm — Đại học Cần Thơ</b><span class="year" data-i18n="yEdu">09/2014</span></div>
 </div></section>
-<section class="wrap"><h2>Dự án tiêu biểu</h2><p>Bấm vào từng nhóm để lọc. Toàn bộ 13 dự án đều tham gia trọn vòng: yêu cầu, thiết kế, triển khai, kiểm thử và vận hành (trừ 2 dự án .NET đầu sự nghiệp tập trung vào triển khai và kiểm thử).</p>
+<section class="wrap"><h2 data-i18n="hProjects">Dự án tiêu biểu</h2><p data-i18n="projectsLead">Bấm vào từng nhóm để lọc. Toàn bộ 13 dự án đều tham gia trọn vòng: yêu cầu, thiết kế, triển khai, kiểm thử và vận hành (trừ 2 dự án .NET đầu sự nghiệp tập trung vào triển khai và kiểm thử).</p>
 <div class="filters">
-<button class="filter active" data-f="all">Tất cả</button>
-<button class="filter" data-f="ai">AI / Agentforce</button>
-<button class="filter" data-f="sf">Salesforce</button>
-<button class="filter" data-f="package">Managed Package</button>
-<button class="filter" data-f="dotnet">.NET</button>
+<button class="filter active" data-f="all" data-i18n="fAll">Tất cả</button>
+<button class="filter" data-f="ai" data-i18n="fAi">AI / Agentforce</button>
+<button class="filter" data-f="sf" data-i18n="fSf">Salesforce</button>
+<button class="filter" data-f="package" data-i18n="fPkg">Managed Package</button>
+<button class="filter" data-f="dotnet" data-i18n="fNet">.NET</button>
 </div>
 <div class="projects" id="projects">
-<article class="project" data-tags="ai sf"><h3>1. AIShopper</h3><div class="meta">12/2024 – 01/2025 · 2 tháng · Nhóm 3 người · Leader &amp; Developer</div><p>Chatbot tư vấn sản phẩm dùng Agentforce, kết hợp Data Cloud, RAG và Prompt Templates.</p><p><span class="tag">Agentforce</span><span class="tag">Data Cloud</span><span class="tag">RAG</span><span class="tag">Flow Builder</span></p></article>
-<article class="project" data-tags="sf"><h3>2. SBOX</h3><div class="meta">06/2023 – hiện tại* · Nhóm 8 người · Leader &amp; Developer</div><p>Bảo trì chức năng thanh toán đơn hàng và đồng bộ dữ liệu với AWS. *Theo skillsheet cập nhật 07/2025.</p><p><span class="tag">Apex</span><span class="tag">LWC</span><span class="tag">Visualforce</span><span class="tag">AWS</span></p></article>
-<article class="project" data-tags="ai sf package"><h3>3. GPT for Salesforce</h3><div class="meta">12/2022 – 06/2023 · 6 tháng · Nhóm 3 người · Leader &amp; Developer</div><p>Managed Package hỗ trợ tích hợp GPT AI với Salesforce.</p><p><span class="tag">Apex</span><span class="tag">LWC</span><span class="tag">GPT AI</span></p></article>
-<article class="project" data-tags="sf"><h3>4. EmailComposer</h3><div class="meta">12/2022 – 05/2023 · 5 tháng · Nhóm 3 người · Leader &amp; Developer</div><p>Hệ thống gửi email marketing cho Salesforce, hỗ trợ merge field nhiều cấp.</p><p><span class="tag">Apex</span><span class="tag">LWC</span></p></article>
-<article class="project" data-tags="sf"><h3>5. Covid Booking — Hệ thống đặt lịch tiêm vaccine</h3><div class="meta">02/2021 – 12/2022 · 1 năm 11 tháng · Nhóm 10 người · Leader &amp; Developer</div><p>Xây dựng hệ thống booking tiêm ngừa vaccine COVID-19 trên Salesforce và Heroku.</p><p><span class="tag">Apex</span><span class="tag">LWC</span><span class="tag">Visualforce</span><span class="tag">Heroku</span></p></article>
-<article class="project" data-tags="sf package"><h3>6. Chat Package for Salesforce</h3><div class="meta">06/2020 – 10/2022 · 2 năm 4 tháng · Nhóm 6 người · Leader &amp; Developer</div><p>Hệ thống chat với LINE, Twilio SMS và các bên thứ ba; liên kết, đồng bộ dữ liệu realtime với Heroku.</p><p><span class="tag">Apex</span><span class="tag">Lightning Components</span><span class="tag">Heroku</span><span class="tag">LINE</span><span class="tag">Twilio SMS</span></p></article>
-<article class="project" data-tags="sf package"><h3>7. Worker Management Package</h3><div class="meta">02/2019 – 06/2020 · 1 năm 4 tháng · Nhóm 5 người · Leader &amp; Developer</div><p>Quản lý worker: phân công task, check-in/check-out theo vị trí; đồng bộ realtime với AWS.</p><p><span class="tag">Apex</span><span class="tag">Lightning Components</span><span class="tag">AWS</span></p></article>
-<article class="project" data-tags="sf"><h3>8. International Recruiting Site</h3><div class="meta">02/2017 – 02/2019 · 2 năm · Nhóm 10 người · Leader &amp; Developer</div><p>Website tuyển dụng quốc tế, quản lý hồ sơ ứng tuyển của các doanh nghiệp; cấu hình Experience Site.</p><p><span class="tag">Apex</span><span class="tag">Visualforce</span><span class="tag">Experience Cloud</span></p></article>
-<article class="project" data-tags="sf package"><h3>9. Incident Management Package for Salesforce</h3><div class="meta">02/2016 – 02/2019 · 3 năm · Nhóm 2 người · Leader &amp; Developer</div><p>Hệ thống quản lý Incident và Vulnerability, đóng gói thành Managed Package.</p><p><span class="tag">Apex</span><span class="tag">Visualforce</span><span class="tag">Lightning Components</span></p></article>
-<article class="project" data-tags="sf package"><h3>10. Marketing ABM Package</h3><div class="meta">02/2016 – 08/2016 · 6 tháng · Nhóm 2 người · Leader &amp; Developer</div><p>Gói ứng dụng marketing ABM, tích hợp Pardot API.</p><p><span class="tag">Apex</span><span class="tag">Visualforce</span><span class="tag">Pardot API</span></p></article>
-<article class="project" data-tags="sf package"><h3>11. Cloud Accounting Package for Salesforce</h3><div class="meta">10/2015 – 02/2016 · 4 tháng · Nhóm 10 người · Leader &amp; Developer</div><p>Hệ thống liên kết thanh toán, đóng gói thành Managed Package.</p><p><span class="tag">Apex</span><span class="tag">Visualforce</span><span class="tag">Salesforce Sites</span></p></article>
-<article class="project" data-tags="dotnet"><h3>12. Lingo</h3><div class="meta">02/2015 – 10/2015 · 8 tháng · Nhóm 5 người · Developer</div><p>Hệ thống thương mại điện tử, quản lý hàng hóa và kho vận bằng VB.NET, C#, ASP.NET MVC 5.0, Oracle.</p><p><span class="tag">.NET</span><span class="tag">C#</span><span class="tag">ASP.NET MVC</span><span class="tag">Oracle</span></p></article>
-<article class="project" data-tags="dotnet"><h3>13. Resona</h3><div class="meta">09/2014 – 02/2015 · 5 tháng · Nhóm 3 người · Leader &amp; Developer</div><p>Hệ thống quản lý bệnh viện / chăm sóc dinh dưỡng bằng C#, .NET 4.0, PostgreSQL.</p><p><span class="tag">.NET</span><span class="tag">C#</span><span class="tag">PostgreSQL</span></p></article>
+<article class="project" data-tags="ai sf"><h3 data-i18n="p1t">1. AIShopper</h3><div class="meta" data-i18n="p1m">12/2024 – 01/2025 · 2 tháng · Nhóm 3 người · Leader &amp; Developer</div><p data-i18n="p1d">Chatbot tư vấn sản phẩm dùng Agentforce, kết hợp Data Cloud, RAG và Prompt Templates.</p><p><span class="tag">Agentforce</span><span class="tag">Data Cloud</span><span class="tag">RAG</span><span class="tag">Flow Builder</span></p></article>
+<article class="project" data-tags="sf"><h3 data-i18n="p2t">2. SBOX</h3><div class="meta" data-i18n="p2m">06/2023 – hiện tại* · Nhóm 8 người · Leader &amp; Developer</div><p data-i18n="p2d">Bảo trì chức năng thanh toán đơn hàng và đồng bộ dữ liệu với AWS. *Theo skillsheet cập nhật 07/2025.</p><p><span class="tag">Apex</span><span class="tag">LWC</span><span class="tag">Visualforce</span><span class="tag">AWS</span></p></article>
+<article class="project" data-tags="ai sf package"><h3 data-i18n="p3t">3. GPT for Salesforce</h3><div class="meta" data-i18n="p3m">12/2022 – 06/2023 · 6 tháng · Nhóm 3 người · Leader &amp; Developer</div><p data-i18n="p3d">Managed Package hỗ trợ tích hợp GPT AI với Salesforce.</p><p><span class="tag">Apex</span><span class="tag">LWC</span><span class="tag">GPT AI</span></p></article>
+<article class="project" data-tags="sf"><h3 data-i18n="p4t">4. EmailComposer</h3><div class="meta" data-i18n="p4m">12/2022 – 05/2023 · 5 tháng · Nhóm 3 người · Leader &amp; Developer</div><p data-i18n="p4d">Hệ thống gửi email marketing cho Salesforce, hỗ trợ merge field nhiều cấp.</p><p><span class="tag">Apex</span><span class="tag">LWC</span></p></article>
+<article class="project" data-tags="sf"><h3 data-i18n="p5t">5. Covid Booking — Hệ thống đặt lịch tiêm vaccine</h3><div class="meta" data-i18n="p5m">02/2021 – 12/2022 · 1 năm 11 tháng · Nhóm 10 người · Leader &amp; Developer</div><p data-i18n="p5d">Xây dựng hệ thống booking tiêm ngừa vaccine COVID-19 trên Salesforce và Heroku.</p><p><span class="tag">Apex</span><span class="tag">LWC</span><span class="tag">Visualforce</span><span class="tag">Heroku</span></p></article>
+<article class="project" data-tags="sf package"><h3 data-i18n="p6t">6. Chat Package for Salesforce</h3><div class="meta" data-i18n="p6m">06/2020 – 10/2022 · 2 năm 4 tháng · Nhóm 6 người · Leader &amp; Developer</div><p data-i18n="p6d">Hệ thống chat với LINE, Twilio SMS và các bên thứ ba; liên kết, đồng bộ dữ liệu realtime với Heroku.</p><p><span class="tag">Apex</span><span class="tag">Lightning Components</span><span class="tag">Heroku</span><span class="tag">LINE</span><span class="tag">Twilio SMS</span></p></article>
+<article class="project" data-tags="sf package"><h3 data-i18n="p7t">7. Worker Management Package</h3><div class="meta" data-i18n="p7m">02/2019 – 06/2020 · 1 năm 4 tháng · Nhóm 5 người · Leader &amp; Developer</div><p data-i18n="p7d">Quản lý worker: phân công task, check-in/check-out theo vị trí; đồng bộ realtime với AWS.</p><p><span class="tag">Apex</span><span class="tag">Lightning Components</span><span class="tag">AWS</span></p></article>
+<article class="project" data-tags="sf"><h3 data-i18n="p8t">8. International Recruiting Site</h3><div class="meta" data-i18n="p8m">02/2017 – 02/2019 · 2 năm · Nhóm 10 người · Leader &amp; Developer</div><p data-i18n="p8d">Website tuyển dụng quốc tế, quản lý hồ sơ ứng tuyển của các doanh nghiệp; cấu hình Experience Site.</p><p><span class="tag">Apex</span><span class="tag">Visualforce</span><span class="tag">Experience Cloud</span></p></article>
+<article class="project" data-tags="sf package"><h3 data-i18n="p9t">9. Incident Management Package for Salesforce</h3><div class="meta" data-i18n="p9m">02/2016 – 02/2019 · 3 năm · Nhóm 2 người · Leader &amp; Developer</div><p data-i18n="p9d">Hệ thống quản lý Incident và Vulnerability, đóng gói thành Managed Package.</p><p><span class="tag">Apex</span><span class="tag">Visualforce</span><span class="tag">Lightning Components</span></p></article>
+<article class="project" data-tags="sf package"><h3 data-i18n="p10t">10. Marketing ABM Package</h3><div class="meta" data-i18n="p10m">02/2016 – 08/2016 · 6 tháng · Nhóm 2 người · Leader &amp; Developer</div><p data-i18n="p10d">Gói ứng dụng marketing ABM, tích hợp Pardot API.</p><p><span class="tag">Apex</span><span class="tag">Visualforce</span><span class="tag">Pardot API</span></p></article>
+<article class="project" data-tags="sf package"><h3 data-i18n="p11t">11. Cloud Accounting Package for Salesforce</h3><div class="meta" data-i18n="p11m">10/2015 – 02/2016 · 4 tháng · Nhóm 10 người · Leader &amp; Developer</div><p data-i18n="p11d">Hệ thống liên kết thanh toán, đóng gói thành Managed Package.</p><p><span class="tag">Apex</span><span class="tag">Visualforce</span><span class="tag">Salesforce Sites</span></p></article>
+<article class="project" data-tags="dotnet"><h3 data-i18n="p12t">12. Lingo</h3><div class="meta" data-i18n="p12m">02/2015 – 10/2015 · 8 tháng · Nhóm 5 người · Developer</div><p data-i18n="p12d">Hệ thống thương mại điện tử, quản lý hàng hóa và kho vận bằng VB.NET, C#, ASP.NET MVC 5.0, Oracle.</p><p><span class="tag">.NET</span><span class="tag">C#</span><span class="tag">ASP.NET MVC</span><span class="tag">Oracle</span></p></article>
+<article class="project" data-tags="dotnet"><h3 data-i18n="p13t">13. Resona</h3><div class="meta" data-i18n="p13m">09/2014 – 02/2015 · 5 tháng · Nhóm 3 người · Leader &amp; Developer</div><p data-i18n="p13d">Hệ thống quản lý bệnh viện / chăm sóc dinh dưỡng bằng C#, .NET 4.0, PostgreSQL.</p><p><span class="tag">.NET</span><span class="tag">C#</span><span class="tag">PostgreSQL</span></p></article>
 </div></section>
 </main>
-<footer>Nội dung dựa trên skillsheet “DinhMinhTam — UpdatedAt20250707”.<br>Ngày sinh, giới tính và các thông tin nhạy cảm trong sheet gốc đã được lược bỏ vì đây là trang công khai.</footer>
-<button class="print" onclick="window.print()">In / Lưu PDF</button>
+<footer><span data-i18n="foot1">Nội dung dựa trên skillsheet “DinhMinhTam — UpdatedAt20250707”.</span><br><span data-i18n="foot2">Ngày sinh, giới tính và các thông tin nhạy cảm trong sheet gốc đã được lược bỏ vì đây là trang công khai.</span></footer>
+<button class="print" data-i18n="print" onclick="window.print()">In / Lưu PDF</button>
 <script>
-document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{
-document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');
-const f=b.dataset.f;document.querySelectorAll('.project').forEach(p=>{p.style.display=(f==='all'||p.dataset.tags.includes(f))?'':'none'});
+const STR={
+vi:{
+title:"Đinh Minh Tâm — Salesforce Developer & Leader",
+desc:"CV của Đinh Minh Tâm: Salesforce Developer với hơn 10 năm kinh nghiệm, chuyên Agentforce, Experience Cloud, LWC và Managed Package.",
+role:"Salesforce Developer & Leader",
+focus:"— Agentforce · Experience Cloud · Managed Package",
+intro:"Hơn 10 năm làm Salesforce, từ thiết kế database, xây dựng Managed Package đến triển khai AI/Agentforce vào sản phẩm thật. Mạnh về dẫn dắt nhóm nhỏ, làm việc có trách nhiệm và giữ tinh thần teamwork.",
+s1:"năm kinh nghiệm Salesforce",s2:"dự án trong skillsheet",s3:"dự án ở vai trò Leader",s4:"chứng chỉ Salesforce",
+hAbout:"Giới thiệu",
+about:"Developer Salesforce gắn bó với platform từ năm 2014, tốt nghiệp kỹ sư phần mềm tại Đại học Cần Thơ.",
+b1t:"10 năm kinh nghiệm dev Salesforce",b1d:" — hiểu sâu về Salesforce Platform và thiết kế cơ sở dữ liệu.",
+b2t:"Khả năng quản lý dự án",b2d:" — trách nhiệm cao trong công việc, dẫn dắt nhóm 2–10 người.",
+b3t:"Tinh thần teamwork",b3d:" — biết cách giữ nhịp làm việc chung của cả nhóm.",
+b4t:"Lĩnh vực sở trường:",b4d:" Salesforce Experience Cloud, .NET, Java.",
+hSkills:"Kỹ năng",skills2:"Ngôn ngữ & nền tảng",
+hCerts:"Chứng chỉ & học vấn",
+edu:"Kỹ sư phần mềm — Đại học Cần Thơ",
+y1:"12/2024",y2:"09/2024",y3:"09/2024",y4:"04/2024",y5:"12/2022",y6:"06/2022",y7:"12/2020",y8:"12/2020",y9:"12/2016",yEdu:"09/2014",
+hProjects:"Dự án tiêu biểu",
+projectsLead:"Bấm vào từng nhóm để lọc. Toàn bộ 13 dự án đều tham gia trọn vòng: yêu cầu, thiết kế, triển khai, kiểm thử và vận hành (trừ 2 dự án .NET đầu sự nghiệp tập trung vào triển khai và kiểm thử).",
+fAll:"Tất cả",fAi:"AI / Agentforce",fSf:"Salesforce",fPkg:"Managed Package",fNet:".NET",
+p1t:"1. AIShopper",p1m:"12/2024 – 01/2025 · 2 tháng · Nhóm 3 người · Leader & Developer",p1d:"Chatbot tư vấn sản phẩm dùng Agentforce, kết hợp Data Cloud, RAG và Prompt Templates.",
+p2t:"2. SBOX",p2m:"06/2023 – hiện tại* · Nhóm 8 người · Leader & Developer",p2d:"Bảo trì chức năng thanh toán đơn hàng và đồng bộ dữ liệu với AWS. *Theo skillsheet cập nhật 07/2025.",
+p3t:"3. GPT for Salesforce",p3m:"12/2022 – 06/2023 · 6 tháng · Nhóm 3 người · Leader & Developer",p3d:"Managed Package hỗ trợ tích hợp GPT AI với Salesforce.",
+p4t:"4. EmailComposer",p4m:"12/2022 – 05/2023 · 5 tháng · Nhóm 3 người · Leader & Developer",p4d:"Hệ thống gửi email marketing cho Salesforce, hỗ trợ merge field nhiều cấp.",
+p5t:"5. Covid Booking — Hệ thống đặt lịch tiêm vaccine",p5m:"02/2021 – 12/2022 · 1 năm 11 tháng · Nhóm 10 người · Leader & Developer",p5d:"Xây dựng hệ thống booking tiêm ngừa vaccine COVID-19 trên Salesforce và Heroku.",
+p6t:"6. Chat Package for Salesforce",p6m:"06/2020 – 10/2022 · 2 năm 4 tháng · Nhóm 6 người · Leader & Developer",p6d:"Hệ thống chat với LINE, Twilio SMS và các bên thứ ba; liên kết, đồng bộ dữ liệu realtime với Heroku.",
+p7t:"7. Worker Management Package",p7m:"02/2019 – 06/2020 · 1 năm 4 tháng · Nhóm 5 người · Leader & Developer",p7d:"Quản lý worker: phân công task, check-in/check-out theo vị trí; đồng bộ realtime với AWS.",
+p8t:"8. International Recruiting Site",p8m:"02/2017 – 02/2019 · 2 năm · Nhóm 10 người · Leader & Developer",p8d:"Website tuyển dụng quốc tế, quản lý hồ sơ ứng tuyển của các doanh nghiệp; cấu hình Experience Site.",
+p9t:"9. Incident Management Package for Salesforce",p9m:"02/2016 – 02/2019 · 3 năm · Nhóm 2 người · Leader & Developer",p9d:"Hệ thống quản lý Incident và Vulnerability, đóng gói thành Managed Package.",
+p10t:"10. Marketing ABM Package",p10m:"02/2016 – 08/2016 · 6 tháng · Nhóm 2 người · Leader & Developer",p10d:"Gói ứng dụng marketing ABM, tích hợp Pardot API.",
+p11t:"11. Cloud Accounting Package for Salesforce",p11m:"10/2015 – 02/2016 · 4 tháng · Nhóm 10 người · Leader & Developer",p11d:"Hệ thống liên kết thanh toán, đóng gói thành Managed Package.",
+p12t:"12. Lingo",p12m:"02/2015 – 10/2015 · 8 tháng · Nhóm 5 người · Developer",p12d:"Hệ thống thương mại điện tử, quản lý hàng hóa và kho vận bằng VB.NET, C#, ASP.NET MVC 5.0, Oracle.",
+p13t:"13. Resona",p13m:"09/2014 – 02/2015 · 5 tháng · Nhóm 3 người · Leader & Developer",p13d:"Hệ thống quản lý bệnh viện / chăm sóc dinh dưỡng bằng C#, .NET 4.0, PostgreSQL.",
+foot1:"Nội dung dựa trên skillsheet “DinhMinhTam — UpdatedAt20250707”.",
+foot2:"Ngày sinh, giới tính và các thông tin nhạy cảm trong sheet gốc đã được lược bỏ vì đây là trang công khai.",
+print:"In / Lưu PDF"
+},
+en:{
+title:"Dinh Minh Tam — Salesforce Developer & Leader",
+desc:"CV of Dinh Minh Tam: Salesforce Developer with 10+ years of experience, focused on Agentforce, Experience Cloud, LWC, and Managed Packages.",
+role:"Salesforce Developer & Leader",
+focus:"— Agentforce · Experience Cloud · Managed Package",
+intro:"More than 10 years in Salesforce, from database design and Managed Package development to shipping AI/Agentforce in real products. Strong at leading small teams, taking ownership, and keeping the group in sync.",
+s1:"years of Salesforce experience",s2:"projects on the skillsheet",s3:"projects as Leader",s4:"Salesforce certifications",
+hAbout:"About",
+about:"Salesforce developer on the platform since 2014, with a software engineering degree from Can Tho University.",
+b1t:"10 years as a Salesforce developer",b1d:" — deep knowledge of the Salesforce Platform and database design.",
+b2t:"Project leadership",b2d:" — high ownership, leading teams of 2–10 people.",
+b3t:"Teamwork",b3d:" — keeps the whole team working in rhythm.",
+b4t:"Strengths:",b4d:" Salesforce Experience Cloud, .NET, and Java.",
+hSkills:"Skills",skills2:"Languages & platforms",
+hCerts:"Certifications & education",
+edu:"Software engineering degree — Can Tho University",
+y1:"12/2024",y2:"09/2024",y3:"09/2024",y4:"04/2024",y5:"12/2022",y6:"06/2022",y7:"12/2020",y8:"12/2020",y9:"12/2016",yEdu:"09/2014",
+hProjects:"Selected projects",
+projectsLead:"Select a group to filter. All 13 projects covered the full cycle: requirements, design, implementation, testing, and operations (except two early-career .NET projects focused on implementation and testing).",
+fAll:"All",fAi:"AI / Agentforce",fSf:"Salesforce",fPkg:"Managed Package",fNet:".NET",
+p1t:"1. AIShopper",p1m:"12/2024 – 01/2025 · 2 months · Team of 3 · Leader & Developer",p1d:"Product-advisory chatbot built with Agentforce, combined with Data Cloud, RAG, and Prompt Templates.",
+p2t:"2. SBOX",p2m:"06/2023 – present* · Team of 8 · Leader & Developer",p2d:"Maintaining order-payment features and data sync with AWS. *As of the skillsheet updated 07/2025.",
+p3t:"3. GPT for Salesforce",p3m:"12/2022 – 06/2023 · 6 months · Team of 3 · Leader & Developer",p3d:"Managed Package for integrating GPT AI with Salesforce.",
+p4t:"4. EmailComposer",p4m:"12/2022 – 05/2023 · 5 months · Team of 3 · Leader & Developer",p4d:"Marketing email system for Salesforce, with multi-level merge fields.",
+p5t:"5. Covid Booking — Vaccine appointment system",p5m:"02/2021 – 12/2022 · 1 year 11 months · Team of 10 · Leader & Developer",p5d:"Built a COVID-19 vaccination booking system on Salesforce and Heroku.",
+p6t:"6. Chat Package for Salesforce",p6m:"06/2020 – 10/2022 · 2 years 4 months · Team of 6 · Leader & Developer",p6d:"Chat system with LINE, Twilio SMS, and third parties, with realtime linking and data sync on Heroku.",
+p7t:"7. Worker Management Package",p7m:"02/2019 – 06/2020 · 1 year 4 months · Team of 5 · Leader & Developer",p7d:"Worker management: task assignment and location-based check-in/check-out, with realtime sync to AWS.",
+p8t:"8. International Recruiting Site",p8m:"02/2017 – 02/2019 · 2 years · Team of 10 · Leader & Developer",p8d:"International recruiting site managing company applications, with Experience Site configuration.",
+p9t:"9. Incident Management Package for Salesforce",p9m:"02/2016 – 02/2019 · 3 years · Team of 2 · Leader & Developer",p9d:"Incident and vulnerability management system, packaged as a Managed Package.",
+p10t:"10. Marketing ABM Package",p10m:"02/2016 – 08/2016 · 6 months · Team of 2 · Leader & Developer",p10d:"ABM marketing application package, integrated with the Pardot API.",
+p11t:"11. Cloud Accounting Package for Salesforce",p11m:"10/2015 – 02/2016 · 4 months · Team of 10 · Leader & Developer",p11d:"Payment-linking system, packaged as a Managed Package.",
+p12t:"12. Lingo",p12m:"02/2015 – 10/2015 · 8 months · Team of 5 · Developer",p12d:"E-commerce system for goods and warehouse operations, built with VB.NET, C#, ASP.NET MVC 5.0, and Oracle.",
+p13t:"13. Resona",p13m:"09/2014 – 02/2015 · 5 months · Team of 3 · Leader & Developer",p13d:"Hospital and nutrition-care management system built with C#, .NET 4.0, and PostgreSQL.",
+foot1:"Based on the skillsheet “DinhMinhTam — UpdatedAt20250707”.",
+foot2:"Date of birth, gender, and other sensitive details from the original sheet are omitted because this page is public.",
+print:"Print / Save PDF"
+},
+ja:{
+title:"ディン・ミン・タム — Salesforce開発者・リーダー",
+desc:"ディン・ミン・タムの職務経歴。Salesforce開発者として10年以上。Agentforce、Experience Cloud、LWC、Managed Packageが専門。",
+role:"Salesforce開発者・リーダー",
+focus:"— Agentforce · Experience Cloud · Managed Package",
+intro:"Salesforce歴10年以上。データベース設計とManaged Package開発から、AI／Agentforceの本番導入まで担当。少人数チームのリード、責任ある遂行、チームの足並みを揃えることを強みとする。",
+s1:"Salesforce経験年数",s2:"スキルシート上の案件",s3:"リーダー担当の案件",s4:"Salesforce認定資格",
+hAbout:"紹介",
+about:"2014年からSalesforceに携わる開発者。カントー大学ソフトウェア工学士。",
+b1t:"Salesforce開発10年",b1d:" — Salesforce Platformとデータベース設計に精通。",
+b2t:"プロジェクト管理",b2d:" — 責任を持って遂行し、2〜10名のチームをリード。",
+b3t:"チームワーク",b3d:" — チーム全体の作業リズムを保つ。",
+b4t:"得意分野：",b4d:" Salesforce Experience Cloud、.NET、Java。",
+hSkills:"スキル",skills2:"言語とプラットフォーム",
+hCerts:"認定資格と学歴",
+edu:"ソフトウェア工学士 — カントー大学",
+y1:"2024年12月",y2:"2024年9月",y3:"2024年9月",y4:"2024年4月",y5:"2022年12月",y6:"2022年6月",y7:"2020年12月",y8:"2020年12月",y9:"2016年12月",yEdu:"2014年9月",
+hProjects:"主なプロジェクト",
+projectsLead:"グループを選んで絞り込み。13件すべてで要件、設計、実装、テスト、運用まで担当（キャリア初期の.NET案件2件は実装とテストが中心）。",
+fAll:"すべて",fAi:"AI / Agentforce",fSf:"Salesforce",fPkg:"Managed Package",fNet:".NET",
+p1t:"1. AIShopper",p1m:"2024年12月 – 2025年1月 · 2か月 · 3名 · リーダー兼開発者",p1d:"Agentforceによる商品相談チャットボット。Data Cloud、RAG、Prompt Templatesを組み合わせて構築。",
+p2t:"2. SBOX",p2m:"2023年6月 – 現在* · 8名 · リーダー兼開発者",p2d:"注文決済機能の保守とAWSとのデータ同期。※スキルシート更新時点（2025年7月）。",
+p3t:"3. GPT for Salesforce",p3m:"2022年12月 – 2023年6月 · 6か月 · 3名 · リーダー兼開発者",p3d:"GPT AIをSalesforceと連携するManaged Package。",
+p4t:"4. EmailComposer",p4m:"2022年12月 – 2023年5月 · 5か月 · 3名 · リーダー兼開発者",p4d:"Salesforce向けマーケティングメール送信システム。複数階層の差し込み項目に対応。",
+p5t:"5. Covid Booking — ワクチン予約システム",p5m:"2021年2月 – 2022年12月 · 1年11か月 · 10名 · リーダー兼開発者",p5d:"SalesforceとHeroku上に、COVID-19ワクチン接種の予約システムを構築。",
+p6t:"6. Chat Package for Salesforce",p6m:"2020年6月 – 2022年10月 · 2年4か月 · 6名 · リーダー兼開発者",p6d:"LINE、Twilio SMS、外部サービスとのチャットシステム。Herokuとリアルタイム連携し、データを同期。",
+p7t:"7. Worker Management Package",p7m:"2019年2月 – 2020年6月 · 1年4か月 · 5名 · リーダー兼開発者",p7d:"ワーカー管理。タスク割り当て、位置情報によるチェックイン／アウト、AWSへリアルタイム同期。",
+p8t:"8. International Recruiting Site",p8m:"2017年2月 – 2019年2月 · 2年 · 10名 · リーダー兼開発者",p8d:"企業の応募者情報を管理する国際採用サイト。Experience Siteを構成。",
+p9t:"9. Incident Management Package for Salesforce",p9m:"2016年2月 – 2019年2月 · 3年 · 2名 · リーダー兼開発者",p9d:"インシデントと脆弱性の管理システム。Managed Packageとして提供。",
+p10t:"10. Marketing ABM Package",p10m:"2016年2月 – 2016年8月 · 6か月 · 2名 · リーダー兼開発者",p10d:"ABMマーケティング向けアプリケーションパッケージ。Pardot APIと連携。",
+p11t:"11. Cloud Accounting Package for Salesforce",p11m:"2015年10月 – 2016年2月 · 4か月 · 10名 · リーダー兼開発者",p11d:"決済連携システム。Managed Packageとして提供。",
+p12t:"12. Lingo",p12m:"2015年2月 – 2015年10月 · 8か月 · 5名 · 開発者",p12d:"商品と倉庫を管理するECシステム。VB.NET、C#、ASP.NET MVC 5.0、Oracleで構築。",
+p13t:"13. Resona",p13m:"2014年9月 – 2015年2月 · 5か月 · 3名 · リーダー兼開発者",p13d:"病院と栄養ケアの管理システム。C#、.NET 4.0、PostgreSQLで構築。",
+foot1:"スキルシート「DinhMinhTam — UpdatedAt20250707」に基づく内容。",
+foot2:"公開ページのため、生年月日、性別、その他の機微な情報は原票から省いています。",
+print:"印刷 / PDF保存"
+}
+};
+function setLang(lang){
+if(!STR[lang]) lang="vi";
+const t=STR[lang];
+document.documentElement.lang=lang;
+document.title=t.title;
+const meta=document.querySelector('meta[name="description"]');
+if(meta) meta.setAttribute("content",t.desc);
+document.querySelectorAll("[data-i18n]").forEach(el=>{
+const v=t[el.dataset.i18n];
+if(v!=null) el.textContent=v;
+});
+document.querySelectorAll(".lang").forEach(b=>{
+const on=b.dataset.lang===lang;
+b.classList.toggle("active",on);
+b.setAttribute("aria-pressed",on?"true":"false");
+});
+try{localStorage.setItem("cv-lang",lang);}catch(e){}
+const url=new URL(location.href);
+if(lang==="vi") url.searchParams.delete("lang");
+else url.searchParams.set("lang",lang);
+history.replaceState(null,"",url.pathname+url.search+url.hash);
+}
+function initialLang(){
+const q=new URLSearchParams(location.search).get("lang");
+if(STR[q]) return q;
+try{const saved=localStorage.getItem("cv-lang");if(STR[saved]) return saved;}catch(e){}
+return "vi";
+}
+document.querySelector(".langs").addEventListener("click",e=>{
+const b=e.target.closest("[data-lang]");
+if(b) setLang(b.dataset.lang);
+});
+document.querySelectorAll(".filter").forEach(b=>b.addEventListener("click",()=>{
+document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));
+b.classList.add("active");
+const f=b.dataset.f;
+document.querySelectorAll(".project").forEach(p=>{p.style.display=(f==="all"||p.dataset.tags.includes(f))?"":"none";});
 }));
+setLang(initialLang());
 </script>
 </body>
 </html>
