@@ -17,6 +17,7 @@ button.lang{border:1px solid rgba(255,255,255,.45);background:rgba(255,255,255,.
 button.lang.active,button.lang:hover{background:#fff;color:var(--navy);border-color:#fff}
 .hero{display:flex;gap:28px;align-items:center;flex-wrap:wrap}.hero>div{flex:1;min-width:min(100%,260px)}.avatar{width:120px;height:120px;border-radius:32px;object-fit:cover;object-position:center 16%;border:2px solid rgba(255,255,255,.55);flex:none;background:rgba(255,255,255,.18)}
 h1{margin:0;font-size:clamp(34px,6vw,56px);line-height:1.05}.subtitle{font-size:clamp(18px,3vw,24px);margin:10px 0 6px;opacity:.95}.intro{max-width:720px;opacity:.9;margin:0}
+.contact{display:flex;gap:8px 16px;flex-wrap:wrap;margin:14px 0 0}.contact a{color:#fff;font-weight:600;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.5)}.contact a:hover{border-bottom-color:#fff}
 .pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:18px}.pill{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);color:#fff;padding:6px 12px;border-radius:999px;font-size:14px}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px}.stat{background:#fff;color:var(--ink);border-radius:16px;padding:16px}.stat b{display:block;font-size:30px;color:var(--navy);line-height:1}.stat span{color:var(--muted);font-size:14px}
 h2{font-size:26px;color:var(--navy);margin:8px 0 6px}h2+p{color:var(--muted);margin-top:0}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;margin:14px 0;box-shadow:0 4px 18px rgba(3,45,96,.05)}
@@ -27,7 +28,7 @@ h2{font-size:26px;color:var(--navy);margin:8px 0 6px}h2+p{color:var(--muted);mar
 .projects{display:grid;grid-template-columns:1fr 1fr;gap:16px}.project{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.project h3{margin:0 0 4px;color:var(--navy)}.meta{color:var(--muted);font-size:14px;margin-bottom:10px}.project p{margin:0 0 12px}
 main{padding-bottom:88px}.print{position:fixed;right:18px;bottom:18px;background:var(--navy);color:#fff;border:0;border-radius:999px;padding:12px 18px;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,.25);font-weight:700}
 @media(max-width:760px){.stats{grid-template-columns:1fr 1fr}.grid2,.projects{grid-template-columns:1fr}header{padding-top:20px}.print{position:static;display:block;margin:20px auto}}
-@media print{body{background:#fff}.print,.filters,.langs{display:none}header{padding:24px 0}.card,.project{box-shadow:none;break-inside:avoid}}
+@media print{body{background:#fff}.print,.filters,.langs{display:none}header{padding:24px 0}.card,.project{box-shadow:none;break-inside:avoid}.contact a{color:#032d60;border-bottom-color:#032d60}}
 </style>
 </head>
 <body>
@@ -41,6 +42,7 @@ main{padding-bottom:88px}.print{position:fixed;right:18px;bottom:18px;background
 <h1>Đinh Minh Tâm</h1>
 <p class="subtitle"><span data-i18n="role">Salesforce Developer &amp; Leader</span> <span data-i18n="focus">— Agentforce · Experience Cloud · Managed Package</span></p>
 <p class="intro" data-i18n="intro">Hơn 10 năm làm Salesforce, từ thiết kế database, xây dựng Managed Package đến triển khai AI/Agentforce vào sản phẩm thật. Mạnh về dẫn dắt nhóm nhỏ, làm việc có trách nhiệm và giữ tinh thần teamwork.</p>
+<p class="contact"><a href="tel:+84939127600"><span data-i18n="phoneLabel">Điện thoại</span> 0939127600</a><a href="mailto:dmtam2013@gmail.com">dmtam2013@gmail.com</a><a href="https://www.linkedin.com/in/dinh-minh-tam-164726138/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
 </div></div>
 <div class="pills"><span class="pill">Salesforce</span><span class="pill">Agentforce &amp; AI</span><span class="pill">LWC · Apex · Visualforce</span><span class="pill">Experience Cloud</span><span class="pill">.NET · Java</span></div>
 <div class="stats">
@@ -111,6 +113,7 @@ desc:"CV của Đinh Minh Tâm: Salesforce Developer với hơn 10 năm kinh ngh
 role:"Salesforce Developer & Leader",
 focus:"— Agentforce · Experience Cloud · Managed Package",
 intro:"Hơn 10 năm làm Salesforce, từ thiết kế database, xây dựng Managed Package đến triển khai AI/Agentforce vào sản phẩm thật. Mạnh về dẫn dắt nhóm nhỏ, làm việc có trách nhiệm và giữ tinh thần teamwork.",
+phoneLabel:"Điện thoại",
 s1:"năm kinh nghiệm Salesforce",s2:"dự án tiêu biểu",s3:"dự án ở vai trò Leader",s4:"chứng chỉ Salesforce",
 hAbout:"Giới thiệu",
 about:"Developer Salesforce gắn bó với platform từ năm 2014, tốt nghiệp kỹ sư phần mềm tại Đại học Cần Thơ.",
@@ -148,6 +151,7 @@ desc:"CV of Dinh Minh Tam: Salesforce Developer with 10+ years of experience, fo
 role:"Salesforce Developer & Leader",
 focus:"— Agentforce · Experience Cloud · Managed Package",
 intro:"More than 10 years in Salesforce, from database design and Managed Package development to shipping AI/Agentforce in real products. Strong at leading small teams, taking ownership, and keeping the group in sync.",
+phoneLabel:"Phone",
 s1:"years of Salesforce experience",s2:"selected projects",s3:"projects as Leader",s4:"Salesforce certifications",
 hAbout:"About",
 about:"Salesforce developer on the platform since 2014, with a software engineering degree from Can Tho University.",
@@ -185,6 +189,7 @@ desc:"ディン・ミン・タムの職務経歴。Salesforce開発者として1
 role:"Salesforce開発者・リーダー",
 focus:"— Agentforce · Experience Cloud · Managed Package",
 intro:"Salesforce歴10年以上。データベース設計とManaged Package開発から、AI／Agentforceの本番導入まで担当。少人数チームのリード、責任ある遂行、チームの足並みを揃えることを強みとする。",
+phoneLabel:"電話",
 s1:"Salesforce経験年数",s2:"掲載案件",s3:"リーダー担当の案件",s4:"Salesforce認定資格",
 hAbout:"紹介",
 about:"2014年からSalesforceに携わる開発者。カントー大学ソフトウェア工学士。",
